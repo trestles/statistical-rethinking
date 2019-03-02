@@ -1,0 +1,130 @@
+#### 1 The Golem of Prague
+  - 1.1. Statistical Golems 1
+    - Fig 1.1 Example Decision Tree 2
+  - 1.2. Statistical Rethinking 4
+    - Rethinking is NHST falsificationist? 5
+    - 1.2.1. Hypotheses are not models 5
+      - Rethinking Entropy and model identification 7
+    - 1.2.2. Measurement matters 7
+      - 1.2.2.1. Observation error 8
+      - 1.2.2.2. Continuous hypothesis 9
+    - 1.2.3. Falsification is consensual 9
+  - 1.3. Three Tools for golem engineering 10
+    - 1.3.1. Bayesian data analysis 10
+      - Rethinking: Probability is not unitary 12
+      - Rethinking: A little history 13
+    - 1.3.2. Multilevel models 13
+      - Rethinking: Multilevel election forecasting 15
+    - 1.3.3. Model comparison and information criteria 15
+      - Rethinking: The Neanderthal in you 16
+  - 1.4. Summary 16
+
+#### 2. Small Worlds and Large Worlds
+  - Rethinking: Fast and frugal in the large world 20
+  - 2.1. The Garden of Forking Data 20
+    - 2.1.1. Counting possibilities 21
+      - Rethinking: Justification 24
+    - 2.1.2. Using prior information 25
+      - Rethinking: Original ignorance 26
+    - 2.1.3. From counts to probability 26
+      - Rethinking: Randomization 28
+  - 2.2. Building a model 28
+    - 2.2.1. A data story 28
+      - Rethinking: The value of storytelling 29
+    - 2.2.2. Bayesian updating 29
+      - Figure 2.5. How a Bayesian model learns 
+      - Rethinking: Sample size and reliable inference 31
+    - 2.2.3. Evaluate 31
+      - Rethinking: Dictionary statistics 32
+  - 2.3. Components of the model 32
+    - 2.3.1. Likelihood 32
+      - Overthinking: Names and probability distributions 33
+      - Rethinking: A central role for likelihood 34
+    - 2.3.2. Parameters 34
+      - Rethinking: Datum or parameter? 34
+    - 2.3.3. Prior 34
+      - Overthinking: Prior as probability distribution 35
+      - Rethinking: Prior, prior pants on fire 36
+    - 2.3.4. Posterior 36
+      - Rethinking: Bayesian data analysis isn't about Bayes' theorem! 37
+  - 2.4. Making the model go 37
+    - Figure 2.6 - The posterior distribution 38
+    - Rethinking: How you fit the model is part of the model 39
+    - 2.4.1. Grid approximation 39
+      - Overthinking: Vectorization 40
+    - 2.4.2. Quadratic approximation 41
+      - Rethinking: Maximum likelihood estimation 44
+      - Overthinking: The Hessians are coming 44
+    - 2.4.3. Markov chain Monte Carlo
+  - 2.5. Summary 45
+  - 2.6. Practice 45
+
+#### 3. Sampling the Imaginary 
+  - Rethinking: The natural frequencey phenomenom is not unique 50
+  - Rethinking: Why statistics can't save bad science 51
+  - 3.1. Sampling from a grid-approximate posterior 52
+    - Figure 3.1. Sampling parameter values from the posterior distribution 53
+  - 3.2. Sampling to summarize 53
+    - 3.2.1. Intervals of defined boundaries 53
+    - 3.2.2. Overthinking: counting with sum 
+      - Figure 3.2. Two kinds of posterior interval 55
+      - Figure 3.3. The difference between percentile and highest posterior density confidence intervals 57
+      - Rethinking: Why 95%? 58
+      - Rethinking: What do confidence intervals mean? 58
+    - 3.2.3. Point estimates 58
+  - 3.3. Sampling to simulate prediction 61
+    - 3.3.1. Dummy data 62
+      - Rethinking: Sampling distributions 63
+    - 3.3.2. Model Checking 64
+      - 3.3.2.1. Did the software work? 64
+      - 3.3.2.2. Is the model adequate? 64
+        - Figure 3.6. Simulating predictions from the total posterior 66
+        - Figure 3.7. Alternative views of the same posterior predictive distribution (see Fig 3.6) 67
+        - Rethinking: What does more extreme mean? 
+  - 3.4. Summary 68
+  - 3.5. Practice 69
+
+#### 4. Linear Models 
+  - Figure 4.1. The Ptolemaic Universe 72
+  - 4.1. Why normal distributions are normal? 72
+    - 4.1.1. Normal by addition 72
+    - 4.1.2. Normal by multiplication 74
+    - 4.1.3. Normal by log-multiplication 75
+    - 4.1.4. Using Guassian distributions 75
+      - 4.1.4.1. Ontological justification 75
+      - 4.1.4.2. Epistemological justification 75
+      - Overthinking: Guassian distribution 76
+  - 4.2. A language for describing models 77
+    - 4.2.1. Re-describing the globe tossing model 78
+    - Overthinking: From model definition to Bayes' theorem 78
+  - 4.3. A Guassian model of height 78
+    - 4.3.1. The data 79
+      - Overthinking: Data frames 80
+      - Overthinking: Index magic 80
+    - 4.3.2. The model 80
+      - Rethinking: Independent and identically distributed 81
+      - Rethinking: A farewell to epsilon 83
+      - Overthinking: Model definition to Bayes' theorem again 83
+    - 4.3.3. Grid approximation of the posterior distribution 83
+    - 4.3.4. Sampling from the posterior 84
+      - Overthinking: Sample size and the normality of sigma's posterior 85
+    - 4.3.5. Fitting the model with `map` 86
+      - Overthinking: Start values for `map` 88
+      - Overthinking: How strong is a prior? 89
+    - 4.3.6. Sampling from a `map` fit 89
+      - Overthinking: Under the hood with multivariate sampling 91
+      - Overthinking: Getting sigma right 91
+  - 4.4. Adding a predictor 82
+  - 4.5. Polynomial regression 110
+  - 4.6. Summary 115
+  - 4.7. Practice 115
+
+#### 5. Multivariate Linear Models 119
+  - 5.1. Spurious association 121
+  - 5.2. Masked relationship 135
+  - 5.3. When adding variables hurts 141
+  - 5.4. Categorical variables 152
+  - 5.5. Ordinary least squares and `lm` 159
+  - 5.6. Summary 162
+  - 5.7. Practice 162
+
