@@ -115,16 +115,135 @@
       - Overthinking: Under the hood with multivariate sampling 91
       - Overthinking: Getting sigma right 91
   - 4.4. Adding a predictor 82
+    - Rethinking: What is regression? 92
+    - 4.4.1. The linear model strategy 92
+      - 4.4.1.1. Likelihood 93
+      - 4.4.1.2. Linear model 93
+        - Rethinking: Nothing special or natural about linear models 94
+        - Overthinking: Units and regression models 94
+      - 4.4.1.3. Priors 94
+        - Rethinking: What's the correct prior? 95
+      - 4.4.2. Fitting the model 95
+        - Rethinking: Everything that depends on parameters has a posterior distribution 96
+        - Overthinking: Embedding linear models 97
+      - 4.4.3. Interpreting the model fit 97
+        - Rethinking: What do parameters mean? 98
+        - 4.4.3.1. Tables of estimates 98
+        - 4.4.3.2. Plotting posterior inference against the data 100
+        - 4.4.3.3. Adding uncertainty around the mean 100
+        - 4.4.3.4. Plotting regression intervals and contours 102
+          - Rethinking: Overconfident confidence intervals 107
+          - Overthinking: How `link` works 107
+        - 4.4.3.5. Prediction intervals 107 
+          - Rethinking: Two kinds of uncertainty 109
+          - Rethinking: Rolling your own `sim`
   - 4.5. Polynomial regression 110
+    - Rethinking: Linear, addiditve, funky 111
+    - Figure 4.9 Polynomial regressions of height on weight (standardized), for the ful !Kung data 113
+    - Overthinking: Converting back to natural scale 114
   - 4.6. Summary 115
   - 4.7. Practice 115
 
 #### 5. Multivariate Linear Models 119
+  - Figure 5.1 The number of Waffle House diners per million people is associated with divorce rate (in the year 2009) within the United States 120
+  - Firgure 5.2 Divorce rate is associated with both marriage rate (left) and median age at marriage (right). Both predictor variables are standardized in this example. The average marraige rate across States is 20 per 1000 adults and the average median age at marriage is 26 years.  121
   - 5.1. Spurious association 121
+    - Rethinking: "Control" is out of control 123
+    - 5.1.1. Multivariate notation 123
+      - Overthinking: Compact notation and the design matrix 124
+    - 5.1.2. Fitting the model 125
+    - 5.1.3 Plotting multivariate posteriors 126
+      - Figure 5.3 Residual marriage rate in each State, after accounting for linear association with median age at marriage 127
+      - 5.1.3.1 Predictor residual plots 126
+      - Figure 5.4 Predictor residual plots for the divorce data 128
+      - 5.1.3.2 Counterfactual plots 129
+      - 5.1.3.3 Posterior prediction plots 131
+      - Figure 5.6 Posterior predictive plots for the multivariate divorce model 133
+      - Rethinking: Stats, huh, what is it good for? 134
+      - Overthinking: Simulating spurious association 
   - 5.2. Masked relationship 135
+    - Figure 5.7 Milk energy and neocortex among primates 138
+    - Overthinking: Simulating a masking relationship 141
   - 5.3. When adding variables hurts 141
+    - 5.3.1 Multicolinear legs 142
+    - Figure 5.8 Left: Posterior distribution of the association of each leg with height, from model m5.8 p144
+    - Figure 5.9 A pairs plot of the total energy, percent fat, and percent lactose variables from the primate milk data. p147
+    - Figure 5.10 The effect of correlated predictor variables on the narrowness of the posterior distribution 149
+    - Rethinking: Identification guaranteed; comprehension up to you
+    - Overthinking: Simulating Collineararity 
+    - 5.3.3 Post-treatment bias 150
+      - Rethinking: Model comparison doesn't help 152
   - 5.4. Categorical variables 152
+    - 5.4.1 Binary categories 153
+      - Overthinking: Re-parameterizing the model 154
+    - 5.4.2 Many Categories 155
+      - Rethinking: Differences in statistical significance 157
+    - 5.4.3 Adding regular predictor variables 158
+    - 5.4.4 Another approach: Unique intercepts 158
   - 5.5. Ordinary least squares and `lm` 159
+    - 5.5.1. Design formulas 159
+    - 5.5.2. Using `lm`
+      - 5.5.2.1. Intercepts are optional 160
+      - 5.5.2.2. Categorical variables 160
+      - 5.5.2.3. Transform variables first 161
+      - 5.5.2.4. No estimate for sigma 161
+    - 5.5.3. Building `map` formulas from `lm` formulas 161
   - 5.6. Summary 162
   - 5.7. Practice 162
+
+#### 6 Overfitting, Regularization, and Information Criteria
+  - Rethinking: Stargazing 167
+  - Rethinking: Is AIC Bayesian? 167
+  - 6.1. The problem with parameters 167
+    - Figure 6.2. Average brain volume in cubic centimeters against body mass in kilograms, for six hominin species. What model best describes the relationship between brain size and body size? p168
+    - 6.1.1. More parameters always improve fit / Overfitting 168
+      - Figure 6.3. Polynomial models of increasing degree, fit to the hominim data 171
+      - Figure 6.4. An underfit model of hominin brain volume. This model ignores any association between body mass and brain volume, producing a horizontal line of predictions. As a result, the model fits badly and (presumably) predicts badly p172
+      - Rethinking: Model fitting as compression p172
+    - 6.1.2. Too few parameters hurts too p172
+      - Figure 6.5. Underfitting and overfitting as under-sensitivity and over-sensitivity so sample p173
+      - Overthinking: dropping rows p174
+      - Rethinking: Bias and variance p174
+  - 6.2. Information theory and model performance 174
+    - 6.2.1. Firing the weatherperson 174
+      - 6.2.1.1. Costs and benefits 175
+      - 6.2.1.2. Measuring accuracy 176
+      - Rethinking: What is a true model? p176
+    - 6.2.2. Information and uncertainty 177
+      - Overthinking: More on entropy 178
+      - Rethinking: The benefits of maximizing uncertainty 179
+    - 6.2.3. From entropy to accuracy 179
+      - Overthinking: Cross entropy and divergence 180
+      - Rethinking: Divergence depends upon direction 180
+    - 6.2.4. From divergence to deviance 
+      - Overthinking: Computing deviance p182
+    - 6.2.5. From deviance to out-of-sample p183
+      - Figure 6.7. Deviance in and out of sample p184
+      - Overthinking: Simulated training and testing p185
+  - 6.3. Regularization 186
+    - Figure 6.8 Regularizing priors, weak and strong. Three guassian priors of varying standard deviation. These priors reduce overfitting, but with different strength. Dashed:Normal (0,1). Thin solid: Normal(0, 0.5). Thick Solid: Normal (0, 0.2) 187
+    - Figure 6.9 Regularizing priors and out-of-sample deviance p188
+    - Rethinking: Multilevel models as adaptive regularization p188
+    - Rethinking: Ridge Regression p188
+  - 6.4. Information criteria 188
+    - Rethinking: Information criteria and consistency 190
+    - 6.4.1. DIC p190
+    - 6.4.2. WAIC p191
+      - Reathinking: What about BIC? 192
+      - Ovethinking: WAIC calculations 192
+        - figure 6.11 Out-of-sample deviance as estimated by DIC and WAIC p194
+    - 6.4.3. DIC and WAIC as estimates of deviance p194
+      - Rethinking: Diverse prediction frameworks p194
+  - 6.5. Using information criteria 195
+    - 6.5.1. Model comparison p196
+      - 6.5.1.1. Comparing WAIC values p197
+        - Rethinking: How big a difference in WAIC is "significant"? p200
+        - Rethinking: WAIC Metaphors p201
+      - 6.5.1.2. Comparing estimates p201
+        - Rethinking: Barplots suck p203
+    - 6.5.2. Model averaging p203
+      - Figure 6.13 Model averaged posterior predictive distribution for the primate milk analysis p204
+      - Rethinking: The Curse of Tippecanoe p204
+  - 6.6. Summary p205
+  - 6.7. Practice p205
 
