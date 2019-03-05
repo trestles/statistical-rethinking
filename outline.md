@@ -247,3 +247,54 @@
   - 6.6. Summary p205
   - 6.7. Practice p205
 
+
+  #### 7 Interactions
+  - 7.1. Building an Interaction p211
+  - 7.2. Symmetry of the linear interaction p223
+  - 7.3. Continuous interactions p225
+  - 7.4. Interactions in design formulas p235
+  - 7.5. Summary p236
+  - 7.6. Practice pp236
+
+  #### 8. Markov Chain Monte Carlo p241
+  - 8.1. Good King Markov and His Island Kingdom p242
+  - 8.2. Markov Chain Monte Carlo p245
+  - 8.3. Easy HMC: map2stan p247
+  - 8.4. Care and feeding of your Markov chain p255
+  - 8.5. Summary p263
+  - 8.6. Practice p263
+
+  #### 9 Big Entropy and the Generalized Linear Model p267
+  - 9.1. Maximum entropy p268
+  - 9.2. Generalized linear models p280
+  - 9.3. Maximum entropy priors p288
+  - 9.4. Summary p289
+
+#### 10. Counting and Classification p291
+- 10.1. Binomial regression p292
+- 10.2. Poisson regression p311
+- 10.3. Other count regressions p322
+- 10.4. Summary p328
+- 10.5. Practice p329
+
+#### 11. Monsters and Mixtures p331
+- 11.1. Ordered categorical outcomes p331
+- 11.2. Zero-inflated outcomes p342
+- 11.3. Over-dispersed outcomes p346
+- 11.4. Summary p351
+- 11.5. Practice p352
+
+#### 12. Multilevel Models p355
+- 12.1 Example: 12.1. Multilevel tadpoles p357
+- 12.2. Varying effects and the underfitting / overfitting tradeoff p364
+- 12.3. More than one type of cluster p370
+- 12.4. Multilevel posterior predictions p376
+- 12.5. Summary p384
+- 12.6. Practice p384
+
+#### 13. Adventures in Covariance p387
+- 13.1. Varying slopes by construction p389
+- 13.2. Example: Admission decisons and gender p398
+- 13.3. Example: Cross-classified chimpanzees with varying slopes p403
+
+
