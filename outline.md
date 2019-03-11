@@ -251,7 +251,17 @@
   #### 7 Interactions
   - 7.1. Building an Interaction p211
   - 7.2. Symmetry of the linear interaction p223
+    - 7.2.1 Buridan's interaction p223
+    - 7.2.2 Africa depends on ruggedness p224
+    - Figure 7.6 The other side of the interaction between ruggedness and continent p225   
   - 7.3. Continuous interactions p225
+    - 7.3.1 The data p226
+    - 7.3.2 The un-centered models p226
+      - Rethinking: Fighting with your robot p229
+    - 7.3.3 Center and re-estimate p230
+      - 7.3.3.1 Estimation worked better p231
+      - 7.3.3.2 Estimates changed less across models p231
+    - 7.3.4 Plotting implied predictions p232
   - 7.4. Interactions in design formulas p235
   - 7.5. Summary p236
   - 7.6. Practice pp236
@@ -259,8 +269,20 @@
   #### 8. Markov Chain Monte Carlo p241
   - 8.1. Good King Markov and His Island Kingdom p242
   - 8.2. Markov Chain Monte Carlo p245
+    - 8.2.1 Gibbs sampling p245
+    - 8.2.2 Hamiltonian Monte Carlo p246
+    - Rethinking: The MCMC horizon 
   - 8.3. Easy HMC: map2stan p247
+    - 8.3.1 Preparation p248
+    - 8.3.2 Estimation p249
+    - 8.3.3 Sampling again, in parallel p250
+    - 8.3.4 Visualization p250
+      - Overthinking: Stan messages p252
+    - 8.3.5 Using the samples p252
+    - 8.3.6 Checking the chain p253
+      = Overthinking: Raw Stan model code p254
   - 8.4. Care and feeding of your Markov chain p255
+    - 8.4.1. How many samples do you need? p255
   - 8.5. Summary p263
   - 8.6. Practice p263
 
