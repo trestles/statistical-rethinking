@@ -279,8 +279,18 @@
 
 #### 11. Monsters and Mixtures p331
 - 11.1. Ordered categorical outcomes p331
+  - 11.1.1 Example: Moral intuition p332
+  - 11.1.2 Describing an ordered distribution with intercepts 
+  - 11.1.3 Adding predictor variables p337
+  - Rethinking: Staring into the Abyss p342
 - 11.2. Zero-inflated outcomes p342
+  - Rethinking: Breaking the law p343
+  - Overthinking: Zero-inflated Poisson distribution function p346
+  - 11.2.1 Example: Zero-inflated Poisson p343
 - 11.3. Over-dispersed outcomes p346
+  - 11.3.1 Beta-binomial p347
+  - 11.3.2 Negative-binomial or gamma-Poisson p350
+  - 11.3.3 Over-dispersion, entropy, and information criteria p350
 - 11.4. Summary p351
 - 11.5. Practice p352
 
